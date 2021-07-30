@@ -1,0 +1,10 @@
+<%= render 'users/info', users: @users %>
+<h1>editing book</h1>
+<%= form_with model: @book, local:true do |f| %>
+  <h4>title</h4>
+  <%= f.text_field :title %>
+  <h4>opinion</h4>
+  <%= f.text_area :body %>
+  <%= f.submit 'update book' %>
+<% end %>
+

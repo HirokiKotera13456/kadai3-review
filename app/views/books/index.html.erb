@@ -1,10 +1,11 @@
 <%= render 'users/info', users: @users %>
-<%= render 'books/form', books: @books %>
 
+<%= render 'books/error', books: @books %>
+<%= render 'books/form', books: @books %>
 
 <% @books.each do |book| %>
 <div>
-  <%= attachment_image_tag book.user, :profile_image_id, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+  <%= attachment_image_tag book.user, :profile_imag, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
   <p>title : <%= link_to book.title ,book_path(book.id) %></p>
   <p>opinion：<%= book.body %></p>
 </div>
